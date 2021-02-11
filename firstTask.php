@@ -86,5 +86,30 @@ echo "<br/>";
 
 echo decimal(101);
 
+// рекурствная функция для обхода массивов
 
+$a = [
+[5, 6],
+[9,[7, 8], 9],
+[5, 6],
+8,
+[5, 6],
+];
+
+function recursiv($a){
+
+	if(is_array($a)){
+
+foreach($a as $key=>$value){
+
+	if(is_array($value)) {
+
+	recursiv($value);
+	}else{
+	echo $value;
+}
+}}};
+
+
+recursiv($a);
 ?>
