@@ -1,4 +1,5 @@
 <?php
+require_once 'classes\Test.php';
 
 $db_host = 'localhost';
 $db_user = 'root';
@@ -48,4 +49,7 @@ foreach ($result as $item) {
 
 ArrayS(3, 5);
 
+
+
+$test = new Test\Test();
 ?>
