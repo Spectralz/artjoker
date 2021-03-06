@@ -304,14 +304,14 @@ $secondArrayMatrix = [
 		for ($row=0; $row < $count; $row++) { 
 				for ($column=0; $column < $countCol; $column++) { 
 						for ($secondRow=0; $secondRow < $countRow; $secondRow++) { 
-$newMatrix[$row][$secondColumn] += $firtsMatrix[$row][$secondRow]*$secondMatrix[$secondRow][$secondColumn];
+$newMatrix[$row][$column] += $firtsMatrix[$row][$secondRow]*$secondMatrix[$secondRow][$column];
 				}
 			}
 		}
 		return $newMatrix;
 	}
 
-matrixMultiplication($firstArrayMatrix, $secondArrayMatrix);
+$matrix = matrixMultiplication($firstArrayMatrix, $secondArrayMatrix);
 
 echo "<br/>Удалить те строки, в которых сумма элементов положительна и присутствует хотя бы один нулевой элемент. Аналогично для столбцов.<br/>";
 
