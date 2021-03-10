@@ -48,7 +48,7 @@ class Rectangle extends Figure
 parent::__construct();
   }
   function Square(){
-    $square = $this->height * $this->$width;
+    $square = $this->height * $this->width;
     return $square;
   }
   function Perimetr(){
