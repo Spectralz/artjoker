@@ -147,27 +147,27 @@ $startIpv4 = "80.80.80.80";
 $ipv4 = "92.150.240.79";
 $finishIpv4 = "100.100.100.100";
 
-function addZero(int $value)
-{
-    return str_pad($value,3,"0", STR_PAD_LEFT);
-}
-
-function rangeEntryIpv4($startIpv4 , $ipv4, $finishIpv4){
-
-    $arrayIpv4[] =  explode(".", $startIpv4);
-    $arrayIpv4[] =  explode(".", $ipv4);
-    $arrayIpv4[] =  explode(".", $finishIpv4);
-
-    for($i = 0; $i <count($arrayIpv4); $i++){
-        $arrayIpv4[$i] = array_map('addZero' , $arrayIpv4[$i]);
-        $result[] = implode("" , $arrayIpv4[$i]);
+    function addZero(int $value)
+    {
+        return str_pad($value,3,"0", STR_PAD_LEFT);
     }
-    if($result[0] < $result[1] && $result[1]< $result[2]){
-        echo "Ipv4 is in range";
-    }else{
-        echo "Ipv4 is out of range";
+
+    function rangeEntryIpv4($startIpv4 , $ipv4, $finishIpv4){
+
+        $arrayIpv4[] =  explode(".", $startIpv4);
+        $arrayIpv4[] =  explode(".", $ipv4);
+        $arrayIpv4[] =  explode(".", $finishIpv4);
+
+        for($i = 0; $i <count($arrayIpv4); $i++){
+            $arrayIpv4[$i] = array_map('addZero' , $arrayIpv4[$i]);
+            $result[] = implode("" , $arrayIpv4[$i]);
+        }
+        if($result[0] < $result[1] && $result[1]< $result[2]){
+            echo "Ipv4 is in range";
+        }else{
+            echo "Ipv4 is out of range";
+        }
     }
-}
 
 rangeEntryIpv4($startIpv4 , $ipv4, $finishIpv4);
 
